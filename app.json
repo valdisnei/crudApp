@@ -1,0 +1,10 @@
+{
+  "name":"crudApp",
+  "scripts":{},
+  "env":{
+    "versao":{
+      "required":true
+    }
+  },
+  "addons":[]
+}
