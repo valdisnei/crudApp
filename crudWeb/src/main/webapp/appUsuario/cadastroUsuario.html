@@ -1,0 +1,59 @@
+
+
+	<div class="container" ng-controller="MyCtrl1">
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+
+				<h2>Cadastro Usuario</h2>
+
+				<form>
+					<div class="form-group" style="size: 10">
+						<label for="id">ID:</label> <input type="text"
+							class="form-control" ng-model="usuario.id" id="id"
+							disabled="disabled" size="10">
+					</div>
+
+					<div class="form-group">
+						<label for="cpf">CPF:</label> <input type="text"
+							class="form-control" ng-model="usuario.cpf"
+							placeholder="Digite o CPF" id="cpf">
+					</div>
+
+					<div class="form-group">
+						<label for="nome">Nome:</label> <input type="text"
+							class="form-control" ng-model="usuario.nome"
+							placeholder="Digite o Nome" id="nome">
+					</div>
+					<div class="form-group">
+						<label for="login">Login:</label> <input type="text"
+							class="form-control" ng-model="usuario.login.usuario"
+							placeholder="Digite o Login do Usuario" id="login">
+					</div>
+					<div class="form-group">
+						<label for="pwd">Password:</label> <input type="password"
+							class="form-control" ng-model="usuario.login.password"
+							placeholder="Digite a Senha" id="pwd">
+					</div>
+
+					<button type="button" class="btn btn-success" value="cadastrar"
+						ng-click="cadastrar();">Cadastrar</button>
+				</form>
+
+
+				<ul class="pager">
+					<li><a href="#/login">Voltar</a></li>
+				</ul>
+
+
+			</div>
+
+		</div>
+
+		<div class="col-sm-4">
+			Resultado: <br>
+			<div>{{mensagem}}</div>
+			<br>			
+		</div>
+	</div>
+

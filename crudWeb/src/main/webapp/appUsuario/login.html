@@ -1,0 +1,36 @@
+
+	<div class="container" ng-controller="loginCtrl">
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+
+				<h2>App Crud</h2>
+
+				<form>
+					<div class="form-group">
+						<label for="login">Login</label> <input type="text"
+							class="form-control" ng-model="usuario.login.usuario"
+							placeholder="Entre com Usuario" id="login">
+					</div>
+					<div class="form-group">
+						<label for="pwd">Senha</label> <input type="password"
+							class="form-control" ng-model="usuario.login.password"
+							placeholder="Entre com a Senha" id="pwd">
+					</div>
+
+					<button type="button" class="btn btn-success" value="cadastrar"
+						ng-click="limpar();">Limpar</button>
+					<button type="button" class="btn btn-success" value="Gerar Token"
+						ng-click="login();">Login</button>
+				</form>					
+				 
+				 {{mensagem}}			
+
+				<ul class="pager">
+					<li><a href="#/cadastro">Registar Usuario</a></li>
+				</ul>
+
+			</div>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
