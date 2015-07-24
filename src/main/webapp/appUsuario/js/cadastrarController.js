@@ -31,7 +31,7 @@ app.controller('MyCtrl1', ['$scope', '$http', function ($scope, $http) {
 				'Accept': 'application/json'};
     	
 	    $http({
-        url: 'http://salty-dawn-2852.herokuapp.com/addUsuario',
+        url: 'http://crudweb-valdissystem.rhcloud.com/addUsuario',
         method: "POST",
         headers: headers,
         data: {

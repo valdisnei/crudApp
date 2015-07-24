@@ -42,7 +42,7 @@ public class CrudController {
 	
 	
 	
-	@RequestMapping(value="/login" , method = RequestMethod.POST)
+	@RequestMapping(value="/login" , method = RequestMethod.PATCH)
 	public Usuario login(@RequestBody Login userLogin) {	
 		
 		Usuario usuario = usuarioRepository.findByLogin(userLogin);

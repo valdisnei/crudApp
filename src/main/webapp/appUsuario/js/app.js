@@ -46,8 +46,8 @@ module.controller(
 
 								$http(
 										{
-											url : 'http://salty-dawn-2852.herokuapp.com/login',
-											method : "POST",
+											url : 'http://crudweb-valdissystem.rhcloud.com/login',
+											method : "PATCH",
 											headers : headers,
 											  data: {
 									        		"usuario": this.usuario.login.usuario,
