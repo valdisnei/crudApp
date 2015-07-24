@@ -68,19 +68,10 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
 				<inherited>true</inherited>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>com.heroku.sdk</groupId>
-				<artifactId>heroku-maven-plugin</artifactId>
-				<version>0.4.4</version>
-				<configuration>
-					<appName>salty-dawn-2852</appName>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -92,7 +83,7 @@
 					<programs>
 						<program>
 							<mainClass>launch.Main</mainClass>
-							<name>webapp</name>
+							<name>root</name>
 						</program>
 					</programs>
 				</configuration>
