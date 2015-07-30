@@ -1,7 +1,8 @@
 'use strict';
 
-var module = angular.module('ngdemo', [ 'ngRoute' ])
-		.config([ '$routeProvider', function($routeProvider) {
+var module = angular.module('ngdemo', [ 'ngRoute' ]);
+
+		module.config([ '$routeProvider', function($routeProvider) {
 			$routeProvider.
 				when('/login', {
 				templateUrl : 'login.html',
@@ -10,10 +11,27 @@ var module = angular.module('ngdemo', [ 'ngRoute' ])
 				when('/cadastro', {
 				templateUrl : 'cadastroUsuario.html',
 				controller : 'MyCtrl1'
+			}).			
+				when('/pagina1', {
+				templateUrl : 'pagina1.html',
+				controller : 'loginCtrl'					
 			}).otherwise({
 				redirectTo : '/login'
-			})
+			})			
 		} ]);
+		
+		
+		module.run(['$rootScope', function($rootScope) {
+		    $rootScope.page = {
+		        setTitle: function(title) {
+		            this.title = title ;
+		        }
+		    }
+		    $rootScope.$on('$routeChangeSuccess', function(event, current, previous) {
+		        $rootScope.page.setTitle('App Crud ');
+		    });
+		}]);		
+		
 
 module.controller(
 				'loginCtrl',
@@ -23,7 +41,9 @@ module.controller(
 						'$window',
 						function($scope, $http, $window) {
 
-							$scope.mensagem = "";						
+							$scope.mensagem = "";
+							
+							$scope.page.setTitle(" valdis App");
 
 							$scope.usuario = {
 								"cpf" : "",
@@ -55,7 +75,7 @@ module.controller(
 									      			}
 										}).success(function(result) {
 									$scope.mensagem = result;
-//									$window.location.href = '#/outraTela';
+									$window.location.href = '#/pagina1';
 								})
 										.error(
 												function(data, status, headers,
@@ -80,4 +100,6 @@ module.controller(
 							}
 
 						} ]);
+
+
 
