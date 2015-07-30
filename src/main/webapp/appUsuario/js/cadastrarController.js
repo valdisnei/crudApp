@@ -31,7 +31,7 @@ app.controller('MyCtrl1', ['$scope', '$http', function ($scope, $http) {
 				'Accept': 'application/json'};
     	
 	    $http({
-        url: 'http://crudweb-valdissystem.rhcloud.com/addUsuario',
+        url: 'http://crudweb-educall.rhcloud.com/addUsuario',
         method: "POST",
         headers: headers,
         data: {
