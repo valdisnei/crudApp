@@ -66,7 +66,7 @@ module.controller(
 
 								$http(
 										{
-											url : 'http://crudweb-educall.rhcloud.com/login',
+											url : 'http://educall-crudweb.rhcloud.com/login',
 											method : "PATCH",
 											headers : headers,
 											  data: {
